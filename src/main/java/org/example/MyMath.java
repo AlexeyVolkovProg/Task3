@@ -1,5 +1,9 @@
 package org.example;
 
+
+/**
+ * Класс отвечает за округление
+ */
 public class MyMath {
     public static double roundTwoSigns(double number) {
         return Math.round(number * 100.0) / 100.0;

@@ -12,6 +12,7 @@ public class Main {
         DetailLine.setPrice(10d);
         if (true) return;
 
+        //Этот код оставил, если захотите ,с другим ценником на единицу товара протестировать
         Scanner scanner = new Scanner(System.in);
 
         Double number = null;
@@ -51,9 +52,11 @@ public class Main {
             amount += line.getAmount();
         }
 
+        //Расхождение по копейкам. Вычисление общего кол-ва копеек, которые будем распределять
         double kopeckDistribution = MyMath.roundTwoSigns(sumReal - sumRound);
         double kopeckLeft = kopeckDistribution;
 
+        //Распределяем копейки
         for (DetailLine line : detail) {
             double k = line.getAmount() / amount;
             double kopeck = Math.min(kopeckLeft, MyMath.ceilTwoSigns(k * kopeckDistribution));

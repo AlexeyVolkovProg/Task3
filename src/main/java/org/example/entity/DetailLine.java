@@ -2,6 +2,9 @@ package org.example.entity;
 
 import org.example.MyMath;
 
+/**
+ * Сущность, представляющая строку таблицы с детализацией
+ */
 public class DetailLine {
     private String name;
     private double amount;
